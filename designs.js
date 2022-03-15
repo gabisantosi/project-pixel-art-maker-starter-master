@@ -1,23 +1,23 @@
-let color = document.getElementById('colorPicker')
-let table = document.getElementById('pixelCanvas')
-let sizePicker = document.getElementById('sizePicker')
+let color = document.getElementById('colorPicker');
+let table = document.getElementById('pixelCanvas');
+let sizePicker = document.getElementById('sizePicker');
 
-const height = document.getElementById('inputHeight').value
-const width = document.getElementById('inputWidth').value
-  // makes grid
-makeGrid(height, width)
+const height = document.getElementById('inputHeight').value;
+const width = document.getElementById('inputWidth').value;
+// makes grid
+makeGrid(height, width);
 
 sizePicker.addEventListener('click', e => {
   // prevents the page from reloading on submitting the form
-  e.preventDefault()
+  e.preventDefault();
 
-  let height = inputHeight.value
-  let width = inputWidth.value
-  table.firstElementChild.remove()
+  let height = inputHeight.value;
+  let width = inputWidth.value;
+  table.firstElementChild.remove();
 
   // makes grid
-  makeGrid(height, width)
-})
+  makeGrid(height, width);
+});
 
 /**
  * @desc create a grid of squares
@@ -26,12 +26,12 @@ sizePicker.addEventListener('click', e => {
  */
 function makeGrid (height, width) {
   for (let i = 0; i < height; i++) {
-    let row = table.insertRow(i)
+    let row = table.insertRow(i);
     for (let j = 0; j < width; j++) {
-      let cell = row.insertCell(j)
+      let cell = row.insertCell(j);
       cell.addEventListener('click', e => {
-        cell.style.backgroundColor = color.value
-      })
+        cell.style.backgroundColor = color.value;
+      });
     }
   }
 }
