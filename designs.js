@@ -4,6 +4,7 @@ let sizePicker = document.getElementById('sizePicker')
 
 const height = document.getElementById('inputHeight').value
 const width = document.getElementById('inputWidth').value
+  // makes grid
 makeGrid(height, width)
 
 sizePicker.addEventListener('click', e => {
